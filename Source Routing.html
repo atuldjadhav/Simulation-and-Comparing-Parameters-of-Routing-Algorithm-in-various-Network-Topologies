@@ -1,0 +1,37 @@
+<html>
+<head><title></title>
+
+</head>
+<body>
+<font size=5 color=red><center>Source Routing</center></font><hr>
+<p>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;        Source Routing is a technique whereby the sender of a packet can specify the route that a packet should take through the network.  As a packet travels through the network, each router will examine the "destination IP address" and choose the next hop to forward the packet to. In source routing, the "source" (i.e. the sender) makes some or all of these decisions.In strict source routing, the sender specifies the exact route the packet must take.  This is virtually never used. 
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;                  The more common form is loose source record route (LSRR), in which the sender gives one or more hops that the packet must go through.  In high-level terms, it may look like: 
+    <pre>                              
+                               To      :  A
+                               From    :  D
+                               Via     :  T</pre>
+
+<b>Source routing is used for the following purposes: </b><br><br>
+
+ &nbsp;&nbsp;&nbsp;&nbsp; Mapping the network <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Used with trace route in order to find all the routes between points on the network. <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Troubleshooting <br>
+
+ &nbsp;&nbsp;&nbsp;&nbsp;Trying to figure out from point "A" why machines "F" and "L" cannot talk with each other. <br><br>
+
+
+<b>Performance</b> <br><br>
+
+ <p>  &nbsp;&nbsp;&nbsp;&nbsp;A network manager might decide to force an alternate link (such as a satellite connection) that is slower, but avoids congesting the correct routes.
+<br><br>
+<b>Hacking</b> <br><br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;      LSRR can be used in a number of ways for hacking purposes. Sometimes machines will be on the Internet, but will not be reachable.  (It may be using a private address like 10.0.0.1).  However, there may be some other machine that is reachable to both sides that forwards packets.  Someone can then reach that private machine from the Internet by source routing through that intermediate machine. <br><br>
+<a href="routingsimulator.html">
+<img src="back.jpg" border=0 width=100 height=25></a>
+</body>
+</html>
